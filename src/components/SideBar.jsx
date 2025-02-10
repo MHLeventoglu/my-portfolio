@@ -20,9 +20,17 @@ export const SideBar = ({ menuOpen, setMenuOpen }) => {
         };
     }, []);
 
+    // Function to handle smooth scrolling
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <>
-            <div className={`font-semibold pl-5 w-45 sticky top-0 flex flex-col h-screen ${sbOpen ? "w-[0%]" : "w-45"} z-50`}>
+            <div className={`sidebar font-semibold pl-5 sticky top-0 flex flex-col h-screen ${sbOpen ? "w-[0%]" : "w-45"} z-50`}>
                 <div className="flex">
                     <a href="#home" className={`mt-4 font-mono text-xl font-bold ${sbOpen ? "hidden" : "visible"}`}>
                         {""}
@@ -34,18 +42,18 @@ export const SideBar = ({ menuOpen, setMenuOpen }) => {
                 </div>
 
                 <div className={`text-sky-600 flex flex-col justify-start items-left space-y-6 mt-3 ${sbOpen ? "hidden" : "visible"}`}>
-                    <a href="#home" className="hover:text-white transition-colors">
+                    <button onClick={() => scrollToSection("home")} className="hover:text-white transition-colors text-left">
                         {""}Home{""}
-                    </a>
-                    <a href="#about" className="hover:text-white transition-colors">
+                    </button>
+                    <button onClick={() => scrollToSection("about")} className="hover:text-white transition-colors text-left">
                         {""}About{""}
-                    </a>
-                    <a href="#projects" className="hover:text-white transition-colors">
+                    </button>
+                    <button onClick={() => scrollToSection("projects")} className="hover:text-white transition-colors text-left">
                         {""}Projects{""}
-                    </a>
-                    <a href="#contact" className="hover:text-white transition-colors">
+                    </button>
+                    <button onClick={() => scrollToSection("contact")} className="hover:text-white transition-colors text-left">
                         {""}Contact{""}
-                    </a>
+                    </button>
                 </div>
             </div>
         </>

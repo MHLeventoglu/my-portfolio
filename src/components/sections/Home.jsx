@@ -41,31 +41,14 @@ export const Home = () => {
             </ul>
           </div>
 
-          <div className="card max-w-lg md:max-w-175 mt-15">
-            <p>              
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aperiam expedita consequatur neque eveniet deleniti quia necessitatibus nam similique aliquam. Reiciendis nulla necessitatibus, accusantium eligendi ab corporis repellat sequi suscipit.
-              Facilis, asperiores. Distinctio expedita exercitationem incidunt, delectus similique repellendus nulla laboriosam possimus beatae? Iste dolor fuga in excepturi adipisci non sapiente odit necessitatibus mollitia. Aspernatur esse dolores eius natus deserunt!
-            </p>
+          <div className="card max-w-lg md:max-w-175 mt-55 text-gray-400 ">
+            <p>
+            Hello, I am Muaz Hamza Leventoğlu. I am a second-year Computer Engineering student, and I am constantly improving myself in the field of software development. I have developed projects, particularly using the .NET and Angular frameworks. I am experienced in backend development with ASP.NET Core Web API and can perform database integration using Entity Framework. On the frontend side, I design modern and user-friendly interfaces with Angular, HTML, CSS, and Bootstrap. Additionally, as a new member of the Gökmen UAV university team, I am working on unmanned aerial vehicle projects using ROS 2, Gazebo, and ArduPilot technologies, and our team is preparing at full speed for the Artificial Intelligence competition at Teknofest Aviation, Space, and Technology Festival. I have beginner-level knowledge in game development with Unity and 3D modeling/rendering with Blender. I have advanced knowledge of Linux operating systems and continuously improve myself to use technology effectively. With my B2 level English proficiency, I do not limit myself to local resources. I am an aspiring engineer who loves reading science fiction books, keeping up with evolving technology, especially the advancements in our country, and constantly learning new things. I am someone who strives to improve myself in every aspect, particularly in engineering, and who loves learning.
+             </p>
           </div>
 
         </div>
 
-        <div className="mt-130"></div>
-        <div className="card">
-          <p className=" max-w-lg md:max-w-175 text-gray-400  text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, praesentium! Rem repellat dolorem quas vel! Sit voluptatum aut a repellat necessitatibus qui optio, quaerat natus impedit. Numquam inventore totam similique!
-            Ex magnam velit nemo eum reprehenderit cum labore veniam nobis vero animi quibusdam mollitia similique laborum voluptas harum asperiores debitis molestias repellendus minus, natus excepturi praesentium quasi? Impedit, dolorem delectus!
-            Accusantium rerum at, dolorum magnam ut exercitationem laboriosam tempore debitis dignissimos sapiente? Debitis quia adipisci cupiditate consequuntur aliquam corporis, et, voluptates mollitia, reiciendis autem est ad provident labore! Odit, vero!
-            Quos illum, adipisci dolorem dolor magnam voluptate delectus culpa explicabo. Nulla ducimus, amet facilis error dolores cupiditate provident similique? Corporis quidem temporibus sequi. Natus, optio dignissimos. Provident vel laudantium nulla?
-            Possimus non sunt saepe aperiam cupiditate nostrum numquam quae quasi debitis consequuntur, amet minus alias animi nemo ipsum. Expedita, molestias amet! Culpa eius reprehenderit obcaecati fuga aut dolorem, ipsum est?
-            Dolores iure explicabo quas aliquam inventore, totam provident obcaecati soluta natus nostrum, veritatis quos facilis quaerat, rem tempora magni odit ab? Ducimus sunt, architecto quae quia odit magnam atque ipsam!
-            Amet culpa sed temporibus inventore enim sunt explicabo sapiente deleniti iure vel perferendis, error molestiae non qui mollitia illum ex eum fuga omnis doloremque debitis ab, rem assumenda natus. Repellat!
-            Ex facilis delectus animi, quam iure a, sint illo quo aliquid ducimus suscipit, cum saepe aut et repellendus molestiae sapiente? Vel laborum nesciunt nam in itaque repellat ad illum perspiciatis.
-            Commodi, dicta perspiciatis inventore ullam id harum voluptatibus veritatis dolorum ex deleniti! Exercitationem magni porro sunt, numquam sit expedita reiciendis perspiciatis voluptates aspernatur, accusamus commodi natus sapiente debitis quam autem!
-            Minus soluta obcaecati reiciendis ut, consequuntur nisi in sunt laudantium maiores eum fugiat voluptates dolorum voluptate ex, molestias velit, quisquam nihil error rem cupiditate culpa totam. Error praesentium culpa accusantium.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis modi quod, sint blanditiis voluptate minus. Labore, veritatis doloremque a ea vero qui nesciunt porro fugiat beatae possimus ex magni? Fugiat!
-          </p>
-        </div>
         <div className="py-5"></div>
         <div className="flex justify-center">
           <a href="#contact" className="button">
