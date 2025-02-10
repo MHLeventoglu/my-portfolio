@@ -7,12 +7,23 @@ export const About = () => {
     "TypeScript",
     "JavaScript",
     "TailwindCSS",
-    "Bootstrap"
+    "Bootstrap",
   ];
 
   const backendSkills = [".Net", "Asp.net/WebApi", "Sql", "Entity Framework"];
 
-  const otherTechnologies = ["Python", "C++", "C#" , "Java", "Git", "Linux" , "Ros" , "Gazebo" , "Ardupilot" , "Blender Software" ];
+  const otherTechnologies = [
+    "Python",
+    "C++",
+    "C#",
+    "Java",
+    "Git",
+    "Linux",
+    "Ros",
+    "Gazebo",
+    "Ardupilot",
+    "Blender Software",
+  ];
 
   return (
     <section
@@ -32,8 +43,7 @@ export const About = () => {
               applications and creating innovative solutions.
             </p>
 
-            <div className="flex flex-row md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
                 <h3 className="text-xl font-bold mb-4"> Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
@@ -88,8 +98,8 @@ export const About = () => {
               <h3 className="text-xl font-bold mb-4"> 🏫 Education </h3>
               <ul className="list-disc list-inside text-gray-300 space-y-2">
                 <li>
-                  <strong> B.S. in Computer Engineering </strong> - Istanbul University - Cerrahpasa
-                  (2022-2027)
+                  <strong> B.S. in Computer Engineering </strong> - Istanbul
+                  University - Cerrahpasa (2022-2027)
                 </li>
                 <li>
                   Relevant Coursework: Data Structures, Web Development, Cloud
@@ -105,9 +115,7 @@ export const About = () => {
                     {" "}
                     Gökmen UAV team (2024 - Present){" "}
                   </h4>
-                  <p>
-                    Developed and maintained autonomous drone software.
-                  </p>
+                  <p>Developed and maintained autonomous drone software.</p>
                 </div>
               </div>
             </div>

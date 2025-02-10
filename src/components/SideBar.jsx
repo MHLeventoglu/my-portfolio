@@ -41,17 +41,17 @@ export const SideBar = ({ menuOpen, setMenuOpen }) => {
                     </div>
                 </div>
 
-                <div className={`text-sky-600 flex flex-col justify-start items-left space-y-6 mt-3 ${sbOpen ? "hidden" : "visible"}`}>
-                    <button onClick={() => scrollToSection("home")} className="hover:text-white transition-colors text-left">
+                <div className={`sidebar-content text-sky-600 flex flex-col justify-start items-left space-y-6 mt-3 ${sbOpen ? "hidden" : "visible"}`}>
+                    <button onClick={() => scrollToSection("home")} className="hover:text-white transition-colors text-left cursor-pointer">
                         {""}Home{""}
                     </button>
-                    <button onClick={() => scrollToSection("about")} className="hover:text-white transition-colors text-left">
+                    <button onClick={() => scrollToSection("about")} className="hover:text-white transition-colors text-left cursor-pointer">
                         {""}About{""}
                     </button>
-                    <button onClick={() => scrollToSection("projects")} className="hover:text-white transition-colors text-left">
+                    <button onClick={() => scrollToSection("projects")} className="hover:text-white transition-colors text-left cursor-pointer">
                         {""}Projects{""}
                     </button>
-                    <button onClick={() => scrollToSection("contact")} className="hover:text-white transition-colors text-left">
+                    <button onClick={() => scrollToSection("contact")} className="hover:text-white transition-colors text-left cursor-pointer">
                         {""}Contact{""}
                     </button>
                 </div>
