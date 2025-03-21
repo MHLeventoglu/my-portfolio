@@ -22,19 +22,19 @@ export const Home = () => {
             <ul className="flex max-sm:flex-col max-sm:justify-start justify-between space-x-5 w-full max-sm:text-left text-gray-400 text-xl space-y-3">
               <li>
                 <a href="https://github.com/MHLevent" target="_blank" rel="noopener noreferrer">
-                  <img src="/src/assets/github-mark-white.svg" alt="GitHub" className="inline-block w-6 h-6 mr-2" />
+                  <img src="https://github.com/MHLeventoglu/my-portfolio/blob/main/src/assets/github-mark-white.svg?raw=true" alt="GitHub" className="inline-block w-6 h-6 mr-2" />
                   GitHub/MHLevent
                 </a>
               </li>
               <li>
                 <a href="www.linkedin.com/in/muaz-hamza-leventoğlu-860109249" target="_blank" rel="noopener noreferrer">
-                  <img src="/src/assets/linkedin.png" alt="LinkedIn" className="inline-block w-6 h-6 mr-2" />
+                  <img src="https://github.com/MHLeventoglu/my-portfolio/blob/main/src/assets/linkedin.png?raw=true" alt="LinkedIn" className="inline-block w-6 h-6 mr-2" />
                   LinkedIn
                 </a>
               </li>
               <li>
                 <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer">
-                  <img src="/src/assets/Instagram.png" alt="Instagram" className="inline-block w-6 h-6 mr-2" />
+                  <img src="https://github.com/MHLeventoglu/my-portfolio/blob/main/src/assets/Instagram.png?raw=true" alt="Instagram" className="inline-block w-6 h-6 mr-2" />
                   Instagram
                 </a>
               </li>
