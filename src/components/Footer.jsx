@@ -9,7 +9,7 @@ export const Footer = () => {
   }, []);
 
   return (
-    <section id="footer" className="w-full bg-gray-900/20 text-white/70 py-8 mt-12">
+    <section id="footer" className="w-full bg-gray-900/20 text-white/70 py-8 mt-12 rounded-2xl shadow-xl">
       <RevealOnScroll>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
