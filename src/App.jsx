@@ -8,6 +8,7 @@ import { About } from './components/sections/About'
 import { SideBar } from './components/SideBar'
 import { Projects } from './components/sections/Projects'
 import { Contact } from './components/sections/Contact'
+import { Footer } from './components/Footer'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Projects/>
             <Contact/>
           </div>
+          <Footer/>
         </div>
       </div>
     </>
