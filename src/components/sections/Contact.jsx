@@ -94,7 +94,7 @@ export const Contact = () => {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span>your.email@example.com</span>
+                  <span>mhleventoglu@hotmail.com</span>
                 </div>
 
                 <div className="flex items-center space-x-4">
@@ -137,7 +137,7 @@ export const Contact = () => {
               {/* Social Media Links */}
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com/yourusername"
+                  href="https://github.com/MHLeventoglu"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-500 transition"
@@ -152,7 +152,7 @@ export const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="www.linkedin.com/in/muaz-hamza-leventoğlu-860109249"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-500 transition"
