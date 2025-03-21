@@ -28,7 +28,7 @@ function App() {
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="flex flex-col w-full">
-          <div className=" justify-start mr-3 grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl my-3 pb-4 shadow-lg w-full ">
+          <div className=" justify-start mr-3 grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl my-3 pb-4 shadow-lg w-full max-sm:m-1 max-sm:rounded-lg max-sm:shadow-none">
             <Home/>
             <About/>
             <Projects/>

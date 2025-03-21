@@ -30,7 +30,7 @@ export const SideBar = ({ menuOpen, setMenuOpen }) => {
 
     return (
         <>
-            <div className={`sidebar font-semibold pl-5 sticky top-0 flex flex-col h-screen ${sbOpen ? "w-[0%]" : "w-45"} z-50`}>
+            <div className={`sidebar font-semibold pl-5 sticky top-0 flex flex-col h-screen ${sbOpen ? "w-[0%] max-sm:pl-0" : "w-45 max-sm:pl-5"} z-50`}>
                 <div className="flex">
                     <a href="#home" className={`mt-4 font-mono text-xl font-bold ${sbOpen ? "hidden" : "visible"}`}>
                         {""}
