@@ -173,7 +173,7 @@ export const Contact = () => {
                   </svg>
                 </a>
                 <a
-                  href="www.linkedin.com/in/muaz-hamza-leventoğlu-860109249"
+                  href="https://www.linkedin.com/in/muaz-hamza-levento%C4%9Flu-860109249/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-500 transition"
