@@ -1,10 +1,28 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Contact = () => {
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission (e.g., send data to an API or email service)
-    alert("Thank you for your message! I'll get back to you soon.");
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xnnpdald", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+        },
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        e.target.reset(); // Reset form after successful submission
+      } else {
+        alert("Error: Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Error: Network error. Please try again later.");
+    }
   };
 
   return (
@@ -20,7 +38,10 @@ export const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6"
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300">
                   Name
