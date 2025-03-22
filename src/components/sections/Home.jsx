@@ -8,7 +8,7 @@ export const Home = () => {
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className=" text-left mt-60 max-sm:mt-20  text-7xl max-sm:text-5xl md:text-8xl font-bold mb-6 pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-right flex flex-col">
+          <h1 className=" text-left mt-54 max-sm:mt-20  text-7xl max-sm:text-5xl md:text-8xl font-bold mb-6 pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-right flex flex-col">
             <p>Muaz Hamza</p>
             <p>Leventoğlu</p>
           </h1>
@@ -23,7 +23,7 @@ export const Home = () => {
               <li>
                 <a href="https://github.com/MHLeventoglu" target="_blank" rel="noopener noreferrer">
                   <img src="https://github.com/MHLeventoglu/my-portfolio/blob/main/src/assets/github-mark-white.svg?raw=true" alt="GitHub" className="inline-block w-6 h-6 mr-2" />
-                  GitHub/MHLevent
+                  GitHub/MHLeventoglu
                 </a>
               </li>
               <li>

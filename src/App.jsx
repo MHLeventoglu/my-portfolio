@@ -28,14 +28,16 @@ function App() {
         {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <div className="flex flex-col w-full">
-          <div className=" justify-start mr-3 grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl my-3 pb-4 shadow-lg w-full max-sm:m-1 max-sm:rounded-lg max-sm:shadow-none">
+        <div className="flex flex-col w-full mr-4 max-sm:mr-6">
+          <div className=" mt-4 justify-start grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl my-3 pb-4 shadow-lg w-full max-sm:m-3 max-sm:rounded-lg max-sm:shadow-none">
             <Home/>
             <About/>
             <Projects/>
             <Contact/>
           </div>
-          <Footer/>
+          <div className="max-sm:m-3 max-sm:mr-0">
+            <Footer/>
+          </div>
         </div>
       </div>
     </>
