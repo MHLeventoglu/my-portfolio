@@ -1,0 +1,3 @@
+Bu birinci satırdır.
+Bu yeni ikinci satırdır.
+Bu dördüncü satırdır.

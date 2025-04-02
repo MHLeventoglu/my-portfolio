@@ -7,7 +7,7 @@
 
 .grad-bg {
   background: rgb(10,30,31);
-  background: linear-gradient(38deg, rgba(9,46,61,1) 34%, rgba(29,41,70,1) 63%, rgba(84,27,96,1) 100%);  
+  background: linear-gradient(38deg, rgba(9,46,61,1) 34%, rgba(29,41,70,1) 75%, rgba(84,27,96,1) 115%);  
 }
 
 body {
