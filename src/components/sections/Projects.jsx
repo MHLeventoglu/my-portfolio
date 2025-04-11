@@ -5,6 +5,18 @@ export const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
+  const vibrantColors = [   
+    "text-blue-400",
+    "text-green-400",
+    "text-purple-400",
+    "text-cyan-400",
+    "text-lime-300",
+    "text-yellow-300",
+    "text-indigo-300",
+    "text-orange-200",
+    "text-lime-400"
+  ]
 
   // Replace with your GitHub username
   const githubUsername = "MHLeventoglu";
@@ -55,7 +67,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center pt-10"
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4">
@@ -65,14 +77,14 @@ export const Projects = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {repos.map((repo) => (
+          <div className="card grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {repos.map((repo,index) => (
               <div
                 key={repo.id}
-                className="card rounded-xl p-6 hover:-translate-y-1 transition-all"
+                className=" border-[0.01rem] border-cyan-900 bg-gray-800/50 hover:bg-gray-800/80 shadow-lg rounded-xl p-6 hover:-translate-y-1 transition-all"
               >
-                <h3 className="text-xl font-bold mb-2">{repo.name}</h3>
-                <p className="text-gray-300 mb-4">
+                <h3 className= {` ${vibrantColors[index % vibrantColors.length]} text-xl font-bold mb-2`}>{repo.name}</h3>
+                <p className={`${vibrantColors[index % vibrantColors.length]} opacity-65 mb-4`}>
                   {repo.description || "No description provided."}
                 </p>
                 <div className="flex items-center text-sm text-gray-400 mb-4">
