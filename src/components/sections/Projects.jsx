@@ -67,7 +67,7 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center pt-10"
+      className="min-h-screen flex items-center justify-center pt-6 pb-15"
     >
       <RevealOnScroll>
         <div className="max-w-6xl mx-auto px-4">

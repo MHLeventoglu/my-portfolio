@@ -30,10 +30,13 @@ function App() {
 
         <div className="flex flex-col w-full p-4 sm:p-6 lg:p-8 gap-3 sm:gap-4 lg:gap-5">
 
-          <div className="justify-start grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl shadow-lg w-full px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-4 max-sm:rounded-lg max-sm:shadow-none">
+          <div className="justify-center align-center grad-bg bg-gray-200/5 backdrop-blur-2xl rounded-3xl shadow-lg w-full px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-4 max-sm:rounded-lg max-sm:shadow-none">
             <Home />
+            <div className="h-px mx-27 bg-gray-500/30 " />
             <About />
+            <div className="h-px mx-27 mb-9 bg-gray-500/30 " />
             <Projects />
+            <div className="h-px mx-27 bg-gray-500/30 " />
             <Contact />
           </div>
 

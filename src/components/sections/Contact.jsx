@@ -28,7 +28,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center"
+      className="py-15 flex items-center justify-center"
     >
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto px-4">
@@ -36,11 +36,11 @@ export const Contact = () => {
             Contact Me
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:flex gap-5">
             {/* Contact Form */}
             <form
               onSubmit={handleSubmit}
-              className="space-y-6"
+              className="space-y-6 md:w-10/21"
             >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-300">
@@ -89,8 +89,13 @@ export const Contact = () => {
               </button>
             </form>
 
+            {/* Vertical Divider */}
+            <div className="md:w-1/21 max-md:hidden flex py-5 justify-center " >
+              <div className="w-px bg-gray-500/30 " />
+            </div>
+
             {/* Contact Information */}
-            <div className="space-y-6">
+            <div className="space-y-6 md:w-10/21">
               <div className="text-gray-300">
                 <h3 className="text-xl font-bold mb-4">Get in Touch</h3>
                 <p className="mb-4">
@@ -133,7 +138,7 @@ export const Contact = () => {
                       d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                     />
                   </svg>
-                  <span>Başakşehir, İstanbul, Türkiye</span>
+                  <span>Başakşehir | İstanbul | Türkiye</span>
                 </div>
 
                 <div className="flex items-center space-x-4">
