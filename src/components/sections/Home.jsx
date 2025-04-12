@@ -1,6 +1,14 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Home = () => {
+// Function to handle smooth scrolling
+const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
+};
+
   return (
     <section
       id="home"
@@ -43,14 +51,14 @@ export const Home = () => {
 
         {/* Butonlar */}
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#about" className="button min-w-30"> {/* About sayfasına yönlendirme */}
+          <a onClick={() => scrollToSection("about")} className="button min-w-30"> {/* About sayfasına yönlendirme */}
             More About Me
           </a>
-          <a href="#contact" className="button">
-            Contact Me
-          </a>
-          <a href="#projects" className="button">
+          <a onClick={() => scrollToSection("projects")} className="button">
             Projects
+          </a>
+          <a onClick={() => scrollToSection("contact")} className="button">
+            Contact Me
           </a>
         </div>
       </RevealOnScroll>
