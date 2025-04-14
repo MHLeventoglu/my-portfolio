@@ -8,8 +8,34 @@ export const About = () => {
   const frontendSkills = ["React + Vite", "Angular", "TypeScript", "JavaScript", "TailwindCSS", "Bootstrap"];
   const backendSkills = [".Net", "Asp.net/WebApi", "Sql", "Entity Framework"];
   const otherTechnologies = ["Python", "C++", "C#", "Java", "Git", "GitHub", "Linux", "Blender Software","CNN training","YOLO"];
-  const takenClasses = ["Introduction to Computer Engineering", "Calculus I", "Data Structures"];
-  const currentlyTakingClasses = ["Computer Organization and Design", "File Organization", "Data Science"];
+  
+  const takenClasses = [
+    "Introduction to Computer Engineering",
+    "Calculus I",
+    "Discrete Mathematics",
+    "Physics I",
+    "Introduction to Algorithms",
+    "Calculus II",
+    "Physics II",
+    "Introduction to Programming",
+    "Linear Algebra",
+    "Circuits and Systems",
+    "Differential Equations",
+    "Logic Circuit Design",
+    "Object-Oriented Programming",
+    "Probability Theory and Statistics",
+    "Data Structures",
+  ];
+
+  const currentlyTakingClasses = [
+    "Computer Organization and Design",
+    "File Organization",
+    "Logic Circuits Laboratory",
+    "Microprocessors",
+    "Numerical Methods",
+    "Software Development Design and Practice",
+    "Data Science",
+  ];
 
 
   return (
