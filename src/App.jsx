@@ -9,6 +9,7 @@ import { SideBar } from './components/SideBar';
 import { Projects } from './components/sections/Projects';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/Footer';
+import { TopBar } from './components/TopBar';
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -27,6 +28,7 @@ function App() {
         {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         {/* <SideBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
+        <TopBar/>
 
         <div className="flex flex-col w-full p-4 sm:p-6 lg:p-8 gap-3 sm:gap-4 lg:gap-5">
 
