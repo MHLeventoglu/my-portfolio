@@ -6,6 +6,11 @@ const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
         section.scrollIntoView({ behavior: "smooth" });
+    }else{
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     }
 };
 
@@ -50,7 +55,7 @@ const scrollToSection = (id) => {
         </div>
 
         {/* Butonlar */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className=" min-[947px]:hidden  flex flex-wrap justify-center gap-4">
           <a onClick={() => scrollToSection("about")} className="button min-w-30"> {/* About sayfasına yönlendirme */}
             More About Me
           </a>
