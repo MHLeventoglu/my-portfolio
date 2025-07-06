@@ -78,13 +78,13 @@ export const Projects = () => {
           </div>
 
           {/* Main Projects Card with left accent line */}
-          <div className="relative card p-8 md:p-10 bg-gray-800/60 border border-cyan-900 shadow-xl rounded-2xl">
+          <div className="relative card p-8 md:p-10 bg-gray-800/60 border border-cyan-900 shadow-xl rounded-2xl animate-card-slide-in-left">
             <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-cyan-400/80 to-blue-500/60 rounded-l-2xl"></div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {repos.map((repo,index) => (
                 <div
                   key={repo.id}
-                  className="border-[0.01rem] border-cyan-900 bg-gray-800/50 hover:bg-gray-800/80 shadow-lg rounded-xl p-6 hover:-translate-y-1 transition-all"
+                  className="border-[0.01rem] border-cyan-900 bg-gray-800/50 hover:bg-gray-800/80 shadow-lg rounded-xl p-6 hover:-translate-y-1 transition-all animate-card-slide-in-left"
                 >
                   {/* Removed left accent line from here */}
                   <h3 className={`flex items-center gap-2 ${vibrantColors[index % vibrantColors.length]} text-xl font-bold mb-2`}>

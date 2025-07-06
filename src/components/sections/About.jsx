@@ -48,14 +48,14 @@ export const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
             About Me
           </h2>
-          <div className="card mb-10 text-center md:text-left relative">
+          <div className="card mb-10 text-center md:text-left relative animate-card-slide-in-left">
             <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-cyan-400/80 to-blue-500/60 rounded-l-xl"></div>
             <p className="text-gray-300/80 text-lg leading-relaxed relative z-10">
               Hello! I am Muaz Hamza Leventoğlu, a 2nd-year Computer Engineering student at Istanbul University-Cerrahpasa, passionately dedicated to software development and artificial intelligence technology. I am experienced in developing comprehensive and scalable full-stack web projects. Focused on continuous learning and self-improvement, I currently contribute to UAV projects in my university's Gökmen UAV team and work on artificial intelligence-based projects. Thanks to my B2 level English proficiency, I effectively utilize global resources. I aim to stay updated in technology by scanning local and global resources and articles.
             </p>
           </div>
 
-          <div className="card mb-10 relative">
+          <div className="card mb-10 relative animate-card-slide-in-left">
             <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-cyan-400/80 to-blue-500/60 rounded-l-xl"></div>
             <h3 className="text-2xl font-bold mb-6 text-center text-white relative z-10">Technical Skills</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
@@ -88,7 +88,7 @@ export const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-            <div className="card border-[0.01rem] border-green-900 bg-green-900/40 hover:bg-green-900/60 shadow-lg rounded-xl relative">
+            <div className="card border-[0.01rem] border-green-900 bg-green-900/40 hover:bg-green-900/60 shadow-lg rounded-xl relative animate-card-slide-in-left">
               <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-400/80 to-green-700/60 rounded-l-xl"></div>
               <h3 className="text-2xl font-bold mb-4 text-green-300 flex items-center gap-2 relative z-10">
                 <span className="inline-block bg-green-400/20 rounded-full p-2">
@@ -155,7 +155,7 @@ export const About = () => {
               </div>
             </div>
 
-            <div className="card border-[0.01rem] border-purple-900 bg-purple-900/40 hover:bg-purple-900/60 shadow-lg rounded-xl relative">
+            <div className="card border-[0.01rem] border-purple-900 bg-purple-900/40 hover:bg-purple-900/60 shadow-lg rounded-xl relative animate-card-slide-in-left">
               <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-purple-400/80 to-purple-700/60 rounded-l-xl"></div>
               <h3 className="text-2xl font-bold mb-4 text-purple-300 flex items-center gap-2 relative z-10">
                 <span className="inline-block bg-purple-400/20 rounded-full p-2">

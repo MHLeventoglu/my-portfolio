@@ -17,12 +17,9 @@ function App() {
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div
         className={
-          `min-h-screen transition-opacity duration-700 ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          } text-gray-100 flex flex-row`
+          `min-h-screen transition-opacity duration-700  text-gray-100 flex flex-row`
         }
       >
         {/* <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}

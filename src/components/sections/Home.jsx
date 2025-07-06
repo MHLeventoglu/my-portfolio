@@ -19,10 +19,11 @@ const scrollToSection = (id) => {
       id="home"
       className="min-h-screen flex flex-col items-center justify-center text-center relative px-4" // flex-col ve text-center eklendi
     >
-      <RevealOnScroll>
         {/* İsim Başlığı */}
-        <h1 className="max-sm:text-[3.4rem] mb-6 text-7xl max-sm:text-6xl md:text-[6rem] font-bold pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight">
-          Muaz Hamza Leventoğlu
+        <h1 className="max-sm:text-[3.4rem] mb-6 text-7xl max-sm:text-6xl md:text-[6rem] font-bold pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight wave-appear">
+          {"Muaz Hamza Leventoğlu".split("").map((char, i) => (
+            <span key={i}>{char === " " ? '\u00A0' : char}</span>
+          ))}
         </h1>
 
         {/* Kısa Slogan/Tanım */}
@@ -66,7 +67,6 @@ const scrollToSection = (id) => {
             Contact Me
           </a>
         </div>
-      </RevealOnScroll>
     </section>
   );
 };
