@@ -25,9 +25,6 @@ export const About = () => {
     "Object-Oriented Programming",
     "Probability Theory and Statistics",
     "Data Structures",
-  ];
-
-  const currentlyTakingClasses = [
     "Computer Organization and Design",
     "File Organization",
     "Logic Circuits Laboratory",
@@ -37,6 +34,11 @@ export const About = () => {
     "Data Science",
   ];
 
+  const currentlyTakingClasses = [
+    "Until next semester",
+  ];
+
+ const GPA = 3.52; 
 
   return (
     <section
@@ -51,7 +53,7 @@ export const About = () => {
           <div className="card mb-10 text-center md:text-left relative animate-card-slide-in-left">
             <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-cyan-400/80 to-blue-500/60 rounded-l-xl"></div>
             <p className="text-gray-300/80 text-lg leading-relaxed relative z-10">
-              Hello! I am Muaz Hamza Leventoğlu, a 2nd-year Computer Engineering student at Istanbul University-Cerrahpasa, passionately dedicated to software development and artificial intelligence technology. I am experienced in developing comprehensive and scalable full-stack web projects. Focused on continuous learning and self-improvement, I currently contribute to UAV projects in my university's Gökmen UAV team and work on artificial intelligence-based projects. Thanks to my B2 level English proficiency, I effectively utilize global resources. I aim to stay updated in technology by scanning local and global resources and articles.
+              Hello! I am Muaz Hamza Leventoğlu, a 3rd-year Computer Engineering student at Istanbul University-Cerrahpasa, passionately dedicated to software development and artificial intelligence technology. I am experienced in developing comprehensive and scalable full-stack web projects. Focused on continuous learning and self-improvement, I currently contribute to UAV projects in my university's Gökmen UAV team and work on artificial intelligence-based projects. Thanks to my B2 level English proficiency, I effectively utilize global resources. I aim to stay updated in technology by scanning local and global resources and articles.
             </p>
           </div>
 
@@ -115,12 +117,12 @@ export const About = () => {
                 <li className="flex items-center gap-3 bg-green-800/10 rounded-lg px-3 py-2">
                   <span className="inline-block bg-green-500/30 rounded-full p-1"><svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4 text-green-200' fill='currentColor' viewBox='0 0 20 20'><circle cx='10' cy='10' r='10'/></svg></span>
                   <strong className="w-28 inline-block">Year:</strong>
-                  <span>2nd Year</span>
+                  <span>3rd Year</span>
                 </li>
                 <li className="flex items-center gap-3 bg-green-800/20 rounded-lg px-3 py-2">
                   <span className="inline-block bg-green-500/30 rounded-full p-1"><svg xmlns='http://www.w3.org/2000/svg' className='h-4 w-4 text-green-200' fill='currentColor' viewBox='0 0 20 20'><circle cx='10' cy='10' r='10'/></svg></span>
                   <strong className="w-28 inline-block">GPA:</strong>
-                  <span className="bg-green-700/30 text-green-200 px-2 py-1 rounded-full text-xs font-semibold">3.4 / 4.0</span>
+                  <span className="bg-green-700/30 text-green-200 px-2 py-1 rounded-full text-xs font-semibold"> {GPA} / 4.0</span>
                 </li>
               </ul>
               <div className="mt-6 flex flex-col gap-2 relative z-10">
