@@ -1,6 +1,15 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { useState, useEffect } from "react";
 
 export const Home = () => {
+  const [isFirefox, setIsFirefox] = useState(false);
+
+  useEffect(() => {
+    // Firefox tarayıcı tespiti
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsFirefox(userAgent.indexOf('firefox') > -1);
+  }, []);
+
 // Function to handle smooth scrolling
 const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -20,10 +29,17 @@ const scrollToSection = (id) => {
       className="min-h-screen flex flex-col items-center justify-center text-center relative px-4" // flex-col ve text-center eklendi
     >
         {/* İsim Başlığı */}
-        <h1 className="max-sm:text-[3.4rem] mb-6 text-7xl max-sm:text-6xl md:text-[6rem] font-bold pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight wave-appear">
-          {"Muaz Hamza Leventoğlu".split("").map((char, i) => (
-            <span key={i}>{char === " " ? '\u00A0' : char}</span>
-          ))}
+        <h1 className={`max-sm:text-[3.4rem] mb-6 text-7xl max-sm:text-6xl md:text-[6.5rem] font-bold pb-1 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight ${isFirefox ? 'wave-appear' : ''}`}>
+          {isFirefox ? (
+            "Muaz Hamza Leventoğlu".split("").map((char, i) => (
+              <span key={i}>{char === " " ? '\u00A0' : char}</span>
+            ))
+          ) : (
+            <span>
+              <span>Muaz Hamza </span>
+              <span>Leventoğlu</span>
+            </span>
+          )}
         </h1>
 
         {/* Kısa Slogan/Tanım */}
