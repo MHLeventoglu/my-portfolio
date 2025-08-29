@@ -49,7 +49,6 @@ export const Portfolio = () => {
             className="justify-center align-center grad-bg backdrop-blur-2xl rounded-3xl shadow-lg w-full px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-4 max-sm:rounded-lg max-sm:shadow-none"
             style={{ 
               backgroundColor: theme.colors.surface, 
-              border: `1px solid ${theme.colors.border}`,
               transition: 'all 0.5s ease'
             }}
           >
