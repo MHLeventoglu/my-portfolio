@@ -1,43 +1,123 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap');
 
-.grad-bg-2 {
-  /* background: rgb(10,30,31); */
-  /* background: linear-gradient(218deg, rgba(10,30,31,1) 16%, rgb(8, 40, 53) 77%);  */
+/* CSS Custom Properties for Theme Support */
+:root {
+  /* Default theme colors - Space Grotesk Classic */
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-accent: #06b6d4;
+  --color-background: rgba(10, 30, 31, 1);
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surfaceHover: rgba(59, 130, 246, 0.1);
+  --color-text: #f3f4f6;
+  --color-textSecondary: #d1d5db;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --bg-image: linear-gradient(218deg, rgba(10,30,31,1) 16%, rgb(8, 40, 53) 77%);
+  --bg-gradient: linear-gradient(38deg, rgba(9,46,61,1) 34%, rgba(29,41,70,1) 75%, rgba(84,27,96,1) 115%);
+  --font-family: 'Space Grotesk', sans-serif;
 }
 
 .grad-bg {
-  /* background: rgb(10,30,31); */
-  /* background: linear-gradient(38deg, rgba(9,46,61,1) 34%, rgba(29,41,70,1) 75%, rgba(84,27,96,1) 115%);   */
-  background: linear-gradient(38deg, rgba(9,46,61,0.2) 34%, rgba(29,41,70,0.3) 75%, rgba(24, 95, 209, 0.1) 115%);  
+  background: var(--bg-gradient);
+}
+
+.grad-bg-2 {
+  background: rgb(10,30,31);
+  background: linear-gradient(218deg, rgba(10,30,31,1) 16%, rgb(8, 40, 53) 77%); 
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Libertinus serif', sans-serif;
-  /* background: rgb(10,30,31); */
-  /* background: linear-gradient(218deg, rgba(10,30,31,1) 16%, rgb(8, 40, 53) 77%);  */
-  color: #f3f4f6;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  transition: color 0.3s ease, background-color 0.3s ease, font-family 0.3s ease;
 }
+
 html {
-  background-image: url(https://raw.githubusercontent.com/MHLeventoglu/my-portfolio/refs/heads/main/src/assets/forest_bg.jpg);
-  /* background: rgb(10,30,31); */
+  background: var(--bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transition: background 0.5s ease;
 }
 
 
 
 .card {
-  @apply p-6 rounded-xl border border-white/10 bg-gray-300/5 backdrop-blur-lg hover:-translate-y-1 transition-all;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: all 0.2s ease;
 }
+
+.card:hover {
+  transform: translateY(-2px);
+  background: var(--color-surfaceHover);
+  border-color: var(--color-primary);
+}
+
 .button {
-  @apply border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 cursor-pointer
-  hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba\(59\,130\,246\,0.2\)] hover:bg-blue-500/10;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.button:hover {
+  background: var(--color-primary);
+  color: var(--color-background);
+  transform: translateY(-1px);
+}
+
 .button-2 {
-  @apply bg-gradient-to-r from-blue-800/50 to-purple-800/30 text-white font-bold backdrop-blur-lg py-2 px-4 rounded shadow-lg transition duration-300 transform hover:scale-99 hover:opacity-60 hover:cursor-pointer;
-}.button-3 {
-  @apply  border-blue-500/20 text-blue-500 py-3 px-6 font-medium transition-all duration-200 cursor-pointer
-hover:bg-blue-500/10;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.button-2:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.button-3 {
+  border: 2px solid var(--color-border);
+  color: var(--color-primary);
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  background: var(--color-surface);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.button-3:hover {
+  background: var(--color-surfaceHover);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
 }
 
 
@@ -169,7 +249,12 @@ hover:bg-blue-500/10;
 .wave-appear span:nth-child(16) { animation-delay: 0.92s; }
 .wave-appear span:nth-child(17) { animation-delay: 0.98s; }
 .wave-appear span:nth-child(18) { animation-delay: 1.04s; }
-.wave-appear span:nth-child(19) { animation-delay: 1.10s; }
+  .wave-appear span:nth-child(19) { animation-delay: 1.10s; }
 .wave-appear span:nth-child(20) { animation-delay: 1.16s; }
 .wave-appear span:nth-child(21) { animation-delay: 1.22s; }
+}
+
+/* Utility classes */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
 }

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { ThemeSelector } from "./ThemeSelector";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -9,6 +10,12 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       <button onClick={() => setMenuOpen(false)} className="absolute top-6 right-6 text-3xl text-white focus:outline-none cursor-pointer" aria-label="Close menu">
         &times;
       </button>
+      
+      {/* Tema seçici - mobil menüde üst kısımda */}
+      <div className="absolute top-6 left-6">
+        <ThemeSelector />
+      </div>
+      
       <div className="text-2xl text-left flex flex-col items-start ">
         <a  onClick={() => setMenuOpen(false)} href="#home" className={`text-gray-300 hover:text-white my-4 transform transition-transform duration-300
           ${

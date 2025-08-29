@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
+import { useProjects, useGitHubProjects, useAnalytics } from "../../hooks/useSupabase.js";
 
 export const Projects = () => {
+  const { projects: supabaseProjects, loading: supabaseLoading, error: supabaseError } = useProjects();
+  const { githubRepos, loading: githubLoading, error: githubError, fetchGitHubRepos } = useGitHubProjects("MHLeventoglu");
+  const { trackProjectClick } = useAnalytics();
+  
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -18,29 +23,41 @@ export const Projects = () => {
     "text-lime-400"
   ]
 
-  // Replace with your GitHub username
-  const githubUsername = "MHLeventoglu";
-
   useEffect(() => {
-    const fetchRepos = async () => {
-      try {
-        const response = await fetch(
-          `https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=6`
-        );
-        if (!response.ok) {
-          throw new Error("Failed to fetch repositories");
-        }
-        const data = await response.json();
-        setRepos(data);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setLoading(false);
+    // Only load from Supabase (admin-selected projects)
+    const loadProjects = async () => {
+      setLoading(true);
+      
+      if (supabaseProjects && supabaseProjects.length > 0) {
+        // Use only Supabase data (admin-selected projects)
+        const formattedProjects = supabaseProjects.map(project => ({
+          id: project.id,
+          name: project.title,
+          description: project.description,
+          html_url: project.github_url || project.demo_url,
+          stargazers_count: project.stars_count || 0,
+          forks_count: project.forks_count || 0,
+          language: project.language || (project.technologies && project.technologies[0]) || "Unknown",
+          isCustom: project.is_custom
+        }));
+        setRepos(formattedProjects);
+        setError(null);
+      } else {
+        // No projects selected by admin - show empty state
+        setRepos([]);
+        setError(null);
       }
+      
+      setLoading(false);
     };
 
-    fetchRepos();
-  }, [githubUsername]);
+    loadProjects();
+  }, [supabaseProjects, supabaseLoading, supabaseError]);
+
+  // Handle project click tracking
+  const handleProjectClick = (project) => {
+    trackProjectClick(project.id || project.name, project.name || project.title);
+  };
 
   if (loading) {
     return (
@@ -60,6 +77,54 @@ export const Projects = () => {
         className="min-h-screen flex items-center justify-center py-20"
       >
         <div className="text-center text-red-500">{error}</div>
+      </section>
+    );
+  }
+
+  // Handle empty projects case
+  if (!loading && (!repos || repos.length === 0)) {
+    return (
+      <section
+        id="projects"
+        className="min-h-screen flex items-center justify-center pt-6 pb-15"
+      >
+        <RevealOnScroll>
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="flex flex-row justify-center text-center">
+              <h2 className="flex text-3xl font-bold mb-8 text-white">
+                  Projects/<img className=" pb-2 px-1 opacity-95 h-10" src="/src/assets/github-mark-white.svg" alt="" /><span className="text-white">Github</span>
+              </h2>
+            </div>
+
+            {/* Empty state card */}
+            <div className="relative p-8 md:p-10 border shadow-xl rounded-2xl animate-card-slide-in-left" 
+                 style={{ 
+                   backgroundColor: 'rgba(75, 85, 99, 0.8)', 
+                   borderColor: 'rgba(34, 197, 94, 0.5)',
+                   color: 'white'
+                 }}>
+              <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-cyan-400 to-blue-500 rounded-l-2xl"></div>
+              <div className="text-center py-12">
+                <div className="text-6xl mb-4" style={{ color: '#22d3ee' }}>🚀</div>
+                <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>Projects Coming Soon!</h3>
+                <p className="mb-6" style={{ color: '#d1d5db' }}>No projects have been selected for display yet. Visit my Github profile to see my projects.</p>
+                <a
+                  href="https://github.com/MHLeventoglu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-3 px-6 rounded-full transition"
+                  style={{ 
+                    backgroundColor: 'rgba(107, 114, 128, 0.2)', 
+                    color: '#9ca3af',
+                    border: '1px solid rgba(107, 114, 128, 0.3)'
+                  }}
+                >
+                  Visit GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </RevealOnScroll>
       </section>
     );
   }
@@ -126,9 +191,10 @@ export const Projects = () => {
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => handleProjectClick(repo)}
                     className="inline-block bg-blue-500/10 text-blue-500 py-2 px-4 rounded-full hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
                   >
-                    View on GitHub
+                    {repo.isCustom ? 'View Project' : 'View on GitHub'}
                   </a>
                 </div>
               ))}
