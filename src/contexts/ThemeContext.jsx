@@ -12,6 +12,24 @@ export const useTheme = () => {
 
 // Tema tanımları
 export const themes = {
+  forest: {
+    id: 'forest',
+    name: 'Forest Green',
+    fontFamily: "'Libertinus serif', serif",
+    colors: {
+      primary: '#2e7fff', // bright green
+      secondary: '#ac48ff', // turquoise  
+      accent: '#ffd23f', // bright yellow
+      background: 'rgba(10, 30, 31, 0.0)',
+      surface: 'rgba(16, 185, 129, 0.08)',
+      surfaceHover: 'rgba(16, 185, 129, 0.15)',
+      text: '#f0fdf4', // green-50
+      textSecondary: '#bbf7d0', // green-200
+      border: 'rgba(16, 185, 129, 0.1)',
+      glass: 'rgba(16, 185, 129, 0.1)',
+    },
+    backgroundImage: 'url(https://raw.githubusercontent.com/MHLeventoglu/my-portfolio/refs/heads/main/src/assets/forest_bg.jpg)',
+  },
   default: {
     id: 'default',
     name: 'Space Grotesk Classic',
@@ -88,28 +106,10 @@ export const themes = {
     backgroundImage: 'linear-gradient(180deg, #000000 0%, #0a0a0f 50%, #000000 100%)',
     gradient: 'linear-gradient(225deg, rgba(99, 102, 241, 0.08) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(244, 63, 94, 0.06) 100%)',
   },
-  forest: {
-    id: 'forest',
-    name: 'Forest Green',
-    fontFamily: "'Libertinus serif', serif",
-    colors: {
-      primary: '#2e7fff', // bright green
-      secondary: '#ac48ff', // turquoise  
-      accent: '#ffd23f', // bright yellow
-      background: 'rgba(10, 30, 31, 0.0)',
-      surface: 'rgba(16, 185, 129, 0.08)',
-      surfaceHover: 'rgba(16, 185, 129, 0.15)',
-      text: '#f0fdf4', // green-50
-      textSecondary: '#bbf7d0', // green-200
-      border: 'rgba(16, 185, 129, 0.1)',
-      glass: 'rgba(16, 185, 129, 0.1)',
-    },
-    backgroundImage: 'url(https://raw.githubusercontent.com/MHLeventoglu/my-portfolio/refs/heads/main/src/assets/forest_bg.jpg)',
-  },
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [currentTheme, setCurrentTheme] = useState('default');
+  const [currentTheme, setCurrentTheme] = useState('forest');
   
   // Local storage'dan tema tercihini yükle
   useEffect(() => {
