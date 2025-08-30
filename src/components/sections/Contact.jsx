@@ -59,7 +59,7 @@ export const Contact = () => {
         <div>
 
           <div className="card">
-            <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-400/80 to-green-700/60 rounded-l-xl"></div>
+            {/* <div className="absolute left-0 top-0 h-full w-2 bg-gradient-to-b from-green-400/80 to-green-700/60 rounded-l-xl"></div> */}
 
             <div className="max-w-2xl mx-auto px-4 text-center p-25 ">
               <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-green-500 to-cyan-400 bg-clip-text text-transparent">
